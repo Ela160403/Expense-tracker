@@ -30,8 +30,8 @@ A simple, modern expense tracker app built with React Native, Expo, and Context 
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
-   cd <project-folder>
+   git clone https://github.com/Ela160403/Expense-tracker
+   cd Expense-tracker
    ```
 2. **Install dependencies:**
    ```sh
@@ -67,7 +67,7 @@ MyApp/
     SettingsScreen.js   # Manage categories, charts, export, clear all
   assets/               # App icons and images
   package.json          # Project dependencies and scripts
-  ...
+  
 ```
 
 ---
@@ -97,20 +97,14 @@ MyApp/
 
 ---
 
-## License
-MIT
 
 ---
 
 ## Author
-- Your Name (replace with your info)
+- Elavarasan V
 
 ---
 
-## Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
----
 
 ## Acknowledgements
 - [React Native](https://reactnative.dev/)
