@@ -16,7 +16,7 @@ export const ExpenseProvider = ({ children }) => {
     "Other",
   ]);
 
-  // 🔄 Load data from storage on mount
+  // Load data from storage on mount
   useEffect(() => {
     const loadData = async () => {
       try {
@@ -32,25 +32,25 @@ export const ExpenseProvider = ({ children }) => {
     loadData();
   }, []);
 
-  // 💾 Save expenses
+  // Save expenses
   const saveExpenses = async (newExpenses) => {
     setExpenses(newExpenses);
     await AsyncStorage.setItem("expenses", JSON.stringify(newExpenses));
   };
 
-  // 💾 Save categories
+  // Save categories
   const saveCategories = async (newCategories) => {
     setCategories(newCategories);
     await AsyncStorage.setItem("categories", JSON.stringify(newCategories));
   };
 
-  // ➕ Add new expense
+  // Add new expense
   const addExpense = (expense) => {
     const newExpenses = [expense, ...expenses];
     saveExpenses(newExpenses);
   };
 
-  // ➕ Add new category
+  // Add new category
   const addCategory = (category) => {
     if (!categories.includes(category)) {
       const newCategories = [...categories, category];
@@ -58,8 +58,7 @@ export const ExpenseProvider = ({ children }) => {
     }
   };
 
-  // 🗑️ Clear all data
-  // 🗑️ Clear all data
+  // Clear all data
 const clearAll = async () => {
   try {
     // Remove keys from AsyncStorage
@@ -69,7 +68,7 @@ const clearAll = async () => {
     setExpenses([]);
     setCategories(["Food", "Transport", "Shopping", "Bills", "Other"]);
 
-    // ✅ Ensure AsyncStorage reflects the reset defaults
+    // Ensure AsyncStorage reflects the reset defaults
     await AsyncStorage.setItem(
       "categories",
       JSON.stringify(["Food", "Transport", "Shopping", "Bills", "Other"])
@@ -83,7 +82,7 @@ const clearAll = async () => {
 };
 
 
-  // 📤 Export expenses as CSV
+  // Export expenses as CSV
   const exportData = async () => {
     try {
       const data = expenses.map((e) => ({

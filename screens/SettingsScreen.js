@@ -18,7 +18,7 @@ export default function SettingsScreen() {
   const { expenses, categories, addCategory, clearAll, exportData } = useContext(ExpenseContext);
   const [newCategory, setNewCategory] = useState("");
 
-  // ➕ Add new category
+  //  Add new category
   const handleAddCategory = () => {
     if (!newCategory.trim()) return;
     addCategory(newCategory.trim());
@@ -33,7 +33,7 @@ export default function SettingsScreen() {
     });
   };
 
-  // 🗑️ Clear all data
+  //  Clear all data
   const handleClear = async () => {
     await clearAll();
 

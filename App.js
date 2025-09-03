@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "#333",
-    zIndex: 1, // make sure text stays on top
+    zIndex: 1, 
   },
 });
     

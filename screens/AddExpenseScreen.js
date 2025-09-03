@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { ExpenseContext } from "../context/ExpenseContext";
-import Toast from "react-native-toast-message"; // ✅ import toast
+import Toast from "react-native-toast-message"; 
 
 export default function AddExpenseScreen() {
   const { addExpense, categories } = useContext(ExpenseContext);
@@ -24,7 +24,6 @@ export default function AddExpenseScreen() {
 
     addExpense(newExpense);
 
-    // ✅ Show toast after adding expense
     Toast.show({
       type: "success",
       text1: "Expense Added",
